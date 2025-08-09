@@ -8,7 +8,6 @@ The objective is to classify network connections as normal or malicious, detecti
 - Train and evaluate unsupervised models (Isolation Forest, Autoencoders) and a supervised XGBoost model.
 - Assess performance using accuracy, precision, recall, and false positive metrics.
 
-![Workflow Diagram](images/workflow_diagram.png)
 
 ## Project Steps
 
@@ -56,7 +55,7 @@ The IDS achieves robust performance:
 
 The EDA highlights key patterns, such as high `src_bytes` variance in DoS attacks, enhancing model interpretability. The system’s low false positives and ability to detect novel threats align with Cisco Secure Network Analytics’ requirements for real-time, reliable threat detection.
 
-![Performance Metrics](images/performance_metrics.png)
+
 
 ## How to Run
 1. **Set Up Virtual Environment**:
@@ -85,17 +84,6 @@ The EDA highlights key patterns, such as high `src_bytes` variance in DoS attack
    - Update the `file_path` variable to match the dataset location.
    - Run all cells to perform preprocessing, EDA, model training, and evaluation.
 
-## Cisco Integration
-This IDS is tailored for Cisco’s AI-driven security ecosystem:
-- **Cisco Secure Network Analytics**: Processes NetFlow-like data for real-time anomaly detection.
-- **Cisco DNA Center**: Integrates with telemetry data for network traffic analysis.
-- **Scalability**: Unsupervised models are optimized for detecting novel threats, supporting Cisco’s adaptive security requirements.
-
-## Why This Project Stands Out for Cisco
-- **Advanced Anomaly Detection**: Isolation Forest and Autoencoders excel at identifying unknown threats, aligning with Cisco’s focus on adaptive security.
-- **In-Depth EDA**: Visualizations (t-SNE, violin plots, heatmaps) provide actionable insights, mirroring Cisco’s data-driven approach.
-- **Low False Positives**: Ensures reliable alerts, critical for Cisco’s security operations.
-- **Technical Proficiency**: Demonstrates expertise in Python, Scikit-learn, TensorFlow, XGBoost, and advanced visualizations, meeting Cisco’s Machine Learning Engineer requirements.
 
 ## Future Enhancements
 - Integrate with Cisco APIs for real-time NetFlow data processing.
