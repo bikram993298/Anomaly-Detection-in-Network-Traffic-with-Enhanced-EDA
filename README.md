@@ -19,6 +19,7 @@ The **Network Intrusion Detection System (NIDS)** identifies malicious network a
 ---
 
 ## **System Architecture (Flow Diagram)**
+```mermaid
 flowchart TD
     A[Network Traffic Data] --> B[Data Collection]
     B --> C[Data Preprocessing]
@@ -29,7 +30,7 @@ flowchart TD
     D2 --> E
     D3 --> E
     E --> F[Detection Results & Alerts]
-
+```
 
 ### **Step-by-Step Pipeline**
 
