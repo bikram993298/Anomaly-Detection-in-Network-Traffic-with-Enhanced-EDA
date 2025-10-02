@@ -100,6 +100,7 @@ flowchart LR
 ---
 
 ## **Deployment Architecture**
+```mermaid
 
 flowchart TD
     A["Internet Traffic"] --> B["Firewall"]
@@ -109,7 +110,7 @@ flowchart TD
     E --> F["Ensemble Module"]
     F --> G["Alert System"]
     G --> H["Admin Dashboard"]
-
+```
 
 * **Batch Mode:** Analyze stored PCAP files.
 * **Streaming Mode:** Real-time packet capture via Kafka/Spark/Flink.
@@ -182,10 +183,4 @@ y_pred_ensemble = np.array([np.bincount(tup).argmax()
 
 * **Bikram Barman**
 
-
----
-
-## **License**
-
-MIT License
 
