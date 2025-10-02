@@ -65,13 +65,15 @@ flowchart TD
 
 ## **System Components & Diagram**
 
+```mermaid
 flowchart LR
-    A["Raw Network Data"] --> B["Feature Extraction"]
-    B --> C["Preprocessing Pipeline"]
-    C --> D["Model Training & Prediction"]
-    D --> E["Individual Models (GNB, DT, XGBoost)"]
-    E --> F["Ensemble Decision Module (Majority Voting)"]
-    F --> G["Alerts / Reports / Dashboards"]
+    A[Raw Network Data] --> B[Feature Extraction]
+    B --> C[Preprocessing Pipeline]
+    C --> D[Model Training & Prediction]
+    D --> E[Individual Models]
+    E --> F[Ensemble Decision Module]
+    F --> G[Alerts / Reports / Dashboards]
+```
 
 
 ### **Preprocessing Detail**
