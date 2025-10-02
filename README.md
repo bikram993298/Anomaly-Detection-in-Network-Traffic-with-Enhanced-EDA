@@ -1,4 +1,5 @@
 # Network Intrusion Detection System for Cisco Security
+kaggle link::https://www.kaggle.com/code/bikrambarman9932/intrusion-detection
 
 With the rapid growth of digital networks and increasing internet usage, network traffic has surged, leading to heightened risks of cyber threats such as unauthorized access, DoS attacks, and data breaches. Intrusion Detection Systems (IDS) are essential for identifying and mitigating these threats to protect network infrastructure. This project develops a Cisco-aligned IDS using the [KDD Cup 1999 dataset](http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html), leveraging unsupervised machine learning (Isolation Forest, Autoencoders) for anomaly detection and a supervised XGBoost classifier for benchmark performance. The system includes advanced exploratory data analysis (EDA) to uncover network traffic patterns, designed to integrate with Cisco’s AI-driven security solutions like Cisco Secure Network Analytics and Cisco DNA Center.
 
