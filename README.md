@@ -19,19 +19,17 @@ The **Network Intrusion Detection System (NIDS)** identifies malicious network a
 ---
 
 ## **System Architecture (Flow Diagram)**
-
-```mermaid
 flowchart TD
     A[Network Traffic Data] --> B[Data Collection]
     B --> C[Data Preprocessing]
-    C --> D1[Gaussian Naive Bayes]
+    C --> D1["Gaussian Naive Bayes"]
     C --> D2[Decision Tree]
     C --> D3[XGBoost]
-    D1 --> E[Ensemble Module (Majority Voting)]
+    D1 --> E["Ensemble Module - Majority Voting"]
     D2 --> E
     D3 --> E
     E --> F[Detection Results & Alerts]
-```
+
 
 ### **Step-by-Step Pipeline**
 
@@ -67,15 +65,14 @@ flowchart TD
 
 ## **System Components & Diagram**
 
-```mermaid
 flowchart LR
-    A[Raw Network Data] --> B[Feature Extraction]
-    B --> C[Preprocessing Pipeline]
-    C --> D[Model Training & Prediction]
-    D --> E[Individual Models]
-    E --> F[Ensemble Decision Module]
-    F --> G[Alerts / Reports / Dashboards]
-```
+    A["Raw Network Data"] --> B["Feature Extraction"]
+    B --> C["Preprocessing Pipeline"]
+    C --> D["Model Training & Prediction"]
+    D --> E["Individual Models (GNB, DT, XGBoost)"]
+    E --> F["Ensemble Decision Module (Majority Voting)"]
+    F --> G["Alerts / Reports / Dashboards"]
+
 
 ### **Preprocessing Detail**
 
@@ -101,13 +98,15 @@ flowchart LR
 
 ## **Deployment Architecture**
 
-```mermaid
 flowchart TD
-    Internet Traffic --> Firewall --> Feature Extractor --> Preprocessing
-    Preprocessing --> ML Models (GNB, DT, XGB)
-    ML Models --> Ensemble Module --> Alert System
-    Alert System --> Admin Dashboard
-```
+    A["Internet Traffic"] --> B["Firewall"]
+    B --> C["Feature Extractor"]
+    C --> D["Preprocessing"]
+    D --> E["ML Models (GNB, DT, XGBoost)"]
+    E --> F["Ensemble Module"]
+    F --> G["Alert System"]
+    G --> H["Admin Dashboard"]
+
 
 * **Batch Mode:** Analyze stored PCAP files.
 * **Streaming Mode:** Real-time packet capture via Kafka/Spark/Flink.
